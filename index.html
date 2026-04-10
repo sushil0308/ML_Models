@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ML Projects Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    header p {
+      opacity: 0.8;
+      margin-top: 10px;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 20px;
+      backdrop-filter: blur(15px);
+      transition: 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      top: -50%;
+      left: -50%;
+      transform: rotate(25deg);
+      transition: 0.5s;
+      opacity: 0;
+    }
+
+    .card:hover::before {
+      opacity: 1;
+      left: 100%;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.05);
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      opacity: 0.9;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      border-radius: 10px;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      transform: scale(1.1);
+    }
+
+    .team {
+      margin: 50px 20px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+    }
+
+    .team h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #00c6ff;
+    }
+
+    .team-members {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .member {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 15px 25px;
+      border-radius: 15px;
+      text-align: center;
+      transition: 0.3s;
+    }
+
+    .member:hover {
+      transform: scale(1.1);
+      background: rgba(0, 198, 255, 0.2);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>🤖 AI EXPO 1.0</h1>
+    <p style="margin-top:8px; font-size:1.2rem; opacity:0.9;">🚀 ML Projects Portfolio</p>
+    <!-- <p style="opacity:0.7; margin-top:6px;">Explore our deployed Machine Learning applications</p> -->
+  </header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>🩺 Diabetes Prediction</h2>
+      <p>Predict likelihood of diabetes using ML.</p>
+      <a class="btn" href="http://catanddog-3ph8zgyjhwwcxgyge4do46.streamlit.app/" target="_blank">Open Project</a>
+    </div>
+
+    <div class="card">
+      <h2>🐱🐶 Cat vs Dog</h2>
+      <p>CNN model for image classification.</p>
+      <a class="btn" href="https://huggingface.co/spaces/sushil0308/CatvsDog" target="_blank">Open Project</a>
+    </div>
+
+    <div class="card">
+      <h2>🛍️ E-commerce NLP</h2>
+      <p>Classifies product descriptions.</p>
+      <a class="btn" href="https://ml-category-predictor-sallfsanl4uzafekzlngkt.streamlit.app/" target="_blank">Open
+        Project</a>
+    </div>
+
+    <div class="card">
+      <h2>🎙️ Gender Recognition</h2>
+      <p>Predict gender from voice signals.</p>
+      <a class="btn" href="https://audio-recognise-sambhavjain.streamlit.app" target="_blank">Open Project</a>
+    </div>
+
+    <div class="card">
+      <h2>🎭 Emotion Recognition</h2>
+      <p>Detect emotions using deep learning.</p>
+      <a class="btn" href="https://emotion-lens-sambhav.streamlit.app" target="_blank">Open Project</a>
+    </div>
+
+  </div>
+
+  <div class="team">
+    <h2>👨‍💻 Team Members</h2>
+    <div class="team-members">
+      <div class="member">
+        <h3>Sushil Sethiya</h3>
+        <p>0801IT231126</p>
+      </div>
+      <div class="member">
+        <h3>Sahil Malik</h3>
+        <p>0801IT231109</p>
+      </div>
+      <div class="member">
+        <h3>Sambhav Jain</h3>
+        <p>0801IT231112</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2026 | ML Portfolio</p>
+  </footer>
+
+</body>
+
+</html>
